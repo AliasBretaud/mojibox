@@ -24,7 +24,7 @@ public class KanjiDictionaryTest {
 
     @Test
     public void searchTest() {
-        var kanji = kanjiDictionary.searchKanji('高');
+        var kanji = kanjiDictionary.searchKanji("高");
         assertEquals("高", kanji.getLiteral());
         var misc = kanji.getMisc();
         assertEquals(2, misc.getGrade());
@@ -55,7 +55,12 @@ public class KanjiDictionaryTest {
 
     @Test
     public void searchNotKanjiTest() {
-        assertNull(kanjiDictionary.searchKanji('A'));
+        assertNull(kanjiDictionary.searchKanji("A"));
+    }
+
+    @Test
+    public void searchUnknownKanjiTest() {
+        assertNull(kanjiDictionary.searchKanji("龘"));
     }
 
     @Test

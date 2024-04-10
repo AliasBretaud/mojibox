@@ -2,8 +2,6 @@ package com.github.aliasbretaud.mojibox;
 
 import java.io.IOException;
 
-import static java.lang.Character.UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS;
-
 public class KanjiDictionary {
 
     private final DictionaryData data;
@@ -19,12 +17,11 @@ public class KanjiDictionary {
         }
     }
 
-    public Kanji searchKanji(Character search) {
-        if (search == null ||
-                Character.UnicodeBlock.of(search) != CJK_UNIFIED_IDEOGRAPHS) {
+    public Kanji searchKanji(String search) {
+        if (search == null) {
             return null;
         }
-        return this.data.getKanjis().get(String.valueOf(search));
+        return this.data.getKanjis().get(search);
     }
 
     public Metadata getMetadata() {
