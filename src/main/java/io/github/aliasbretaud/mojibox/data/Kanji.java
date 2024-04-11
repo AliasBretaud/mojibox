@@ -1,7 +1,9 @@
-package com.github.aliasbretaud.mojibox;
+package io.github.aliasbretaud.mojibox.data;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import io.github.aliasbretaud.mojibox.enums.Language;
+import io.github.aliasbretaud.mojibox.enums.ReadingType;
 import lombok.*;
 
 import java.io.Serial;

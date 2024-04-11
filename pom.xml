@@ -4,9 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.aliasbretaud</groupId>
+    <groupId>io.github.aliasbretaud</groupId>
     <artifactId>mojibox</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
+
+    <name>Mojibox</name>
+    <description>A simple kanji dictionary library.</description>
+    <url>https://github.com/AliasBretaud/mojibox</url>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -21,6 +25,58 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.3.0</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.6.3</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.4.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>central</publishingServerId>
+                    <tokenAuth>true</tokenAuth>
+                    <autoPublish>true</autoPublish>
+                    <waitUntil>published</waitUntil>
+                </configuration>
             </plugin>
         </plugins>
     </build>
@@ -50,13 +106,24 @@
         </dependency>
     </dependencies>
 
-    <distributionManagement>
-        <repository>
-            <id>github</id>
-            <name>GitHub AliasBretaud Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/AliasBretaud/mojibox</url>
-        </repository>
-    </distributionManagement>
+    <scm>
+        <url>https://github.com/AliasBretaud/mojibox</url>
+        <connection>scm:git:https://github.com/AliasBretaud/mojibox.git</connection>
+        <developerConnection>scm:git:ssh://github.com/AliasBretaud/mojibox.git</developerConnection>
+    </scm>
 
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Florian Bretaud</name>
+            <email>lcdopg@gmail.com</email>
+        </developer>
+    </developers>
 
 </project>

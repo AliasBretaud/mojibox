@@ -1,4 +1,9 @@
-package com.github.aliasbretaud.mojibox;
+package io.github.aliasbretaud.mojibox.dictionary;
+
+import io.github.aliasbretaud.mojibox.data.DictionaryData;
+import io.github.aliasbretaud.mojibox.data.Kanji;
+import io.github.aliasbretaud.mojibox.data.Metadata;
+import io.github.aliasbretaud.mojibox.builder.DictionaryBuilder;
 
 import java.io.IOException;
 

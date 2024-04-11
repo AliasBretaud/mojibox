@@ -1,4 +1,4 @@
-package com.github.aliasbretaud.mojibox;
+package io.github.aliasbretaud.mojibox.data;
 
 import java.time.LocalDate;
 

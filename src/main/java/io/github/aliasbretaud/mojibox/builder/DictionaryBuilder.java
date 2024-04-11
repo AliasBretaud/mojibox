@@ -1,7 +1,8 @@
-package com.github.aliasbretaud.mojibox;
+package io.github.aliasbretaud.mojibox.builder;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import io.github.aliasbretaud.mojibox.data.DictionaryData;
 
 import java.io.IOException;
 import java.net.URL;

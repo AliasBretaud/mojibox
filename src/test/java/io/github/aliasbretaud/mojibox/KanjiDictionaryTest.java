@@ -1,5 +1,8 @@
-package com.github.aliasbretaud.mojibox;
+package io.github.aliasbretaud.mojibox;
 
+import io.github.aliasbretaud.mojibox.dictionary.KanjiDictionary;
+import io.github.aliasbretaud.mojibox.enums.Language;
+import io.github.aliasbretaud.mojibox.enums.ReadingType;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
