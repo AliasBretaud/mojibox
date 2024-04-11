@@ -6,7 +6,7 @@
 
     <groupId>io.github.aliasbretaud</groupId>
     <artifactId>mojibox</artifactId>
-    <version>0.0.3</version>
+    <version>0.0.4</version>
 
     <name>Mojibox</name>
     <description>A simple kanji dictionary library.</description>

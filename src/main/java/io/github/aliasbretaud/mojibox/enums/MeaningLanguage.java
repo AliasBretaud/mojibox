@@ -1,5 +1,5 @@
 package io.github.aliasbretaud.mojibox.enums;
 
-public enum Language {
+public enum MeaningLanguage {
     EN, FR, ES, PT
 }

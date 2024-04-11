@@ -18,6 +18,6 @@ public class DictionaryData {
     private Metadata metadata;
 
     @JsonDeserialize(as = HashMap.class)
-    private Map<String, Kanji> kanjis;
+    private Map<String, KanjiEntry> kanjis;
 
 }

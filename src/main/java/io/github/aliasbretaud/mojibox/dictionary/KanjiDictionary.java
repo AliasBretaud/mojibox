@@ -1,7 +1,7 @@
 package io.github.aliasbretaud.mojibox.dictionary;
 
 import io.github.aliasbretaud.mojibox.data.DictionaryData;
-import io.github.aliasbretaud.mojibox.data.Kanji;
+import io.github.aliasbretaud.mojibox.data.KanjiEntry;
 import io.github.aliasbretaud.mojibox.data.Metadata;
 import io.github.aliasbretaud.mojibox.builder.DictionaryBuilder;
 
@@ -22,7 +22,7 @@ public class KanjiDictionary {
         }
     }
 
-    public Kanji searchKanji(String search) {
+    public KanjiEntry searchKanji(String search) {
         if (search == null) {
             return null;
         }

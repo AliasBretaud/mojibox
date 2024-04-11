@@ -1,7 +1,7 @@
 package io.github.aliasbretaud.mojibox;
 
 import io.github.aliasbretaud.mojibox.dictionary.KanjiDictionary;
-import io.github.aliasbretaud.mojibox.enums.Language;
+import io.github.aliasbretaud.mojibox.enums.MeaningLanguage;
 import io.github.aliasbretaud.mojibox.enums.ReadingType;
 import org.junit.jupiter.api.Test;
 
@@ -43,10 +43,10 @@ public class KanjiDictionaryTest {
         assertEquals(List.of("たか.い", "たか", "-だか", "たか.まる", "たか.める"),
                 readings.get(ReadingType.JA_KUN));
         var meanings = kanji.getMeanings();
-        assertEquals(List.of("tall", "high", "expensive"), meanings.get(Language.EN));
-        assertEquals(List.of("haut", "élevé", "grand", "cher"), meanings.get(Language.FR));
-        assertEquals(List.of("alto", "caro", "sobresaliente", "elevar", "levantar"), meanings.get(Language.ES));
-        assertEquals(List.of("Caro", "alto"), meanings.get(Language.PT));
+        assertEquals(List.of("tall", "high", "expensive"), meanings.get(MeaningLanguage.EN));
+        assertEquals(List.of("haut", "élevé", "grand", "cher"), meanings.get(MeaningLanguage.FR));
+        assertEquals(List.of("alto", "caro", "sobresaliente", "elevar", "levantar"), meanings.get(MeaningLanguage.ES));
+        assertEquals(List.of("Caro", "alto"), meanings.get(MeaningLanguage.PT));
         var nanori = kanji.getNanori();
         assertEquals(List.of("か", "こ", "じょい", "た", "はか"), nanori);
     }

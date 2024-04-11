@@ -2,7 +2,7 @@ package io.github.aliasbretaud.mojibox.data;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import io.github.aliasbretaud.mojibox.enums.Language;
+import io.github.aliasbretaud.mojibox.enums.MeaningLanguage;
 import io.github.aliasbretaud.mojibox.enums.ReadingType;
 import lombok.*;
 
@@ -18,7 +18,7 @@ import java.util.Map;
 @AllArgsConstructor
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Kanji implements Serializable {
+public class KanjiEntry implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 1L;
@@ -31,7 +31,7 @@ public class Kanji implements Serializable {
     private Map<ReadingType, List<String>> readings;
 
     @JsonDeserialize(as = HashMap.class)
-    private Map<Language, List<String>> meanings;
+    private Map<MeaningLanguage, List<String>> meanings;
 
     private List<String> nanori;
 
