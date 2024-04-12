@@ -35,17 +35,30 @@ public class KanjiEntry implements Serializable {
 
     private List<String> nanori;
 
+    public List<String> getReading(ReadingType type) {
+        return this.readings.get(type);
+    }
+
+    public List<String> getMeaning(MeaningLanguage lang) {
+        return this.meanings.get(lang);
+    }
+
     @Getter
     @Setter
     @AllArgsConstructor
     @NoArgsConstructor
     @Data
     public static class Misc implements Serializable {
+
         @Serial
         private static final long serialVersionUID = 1L;
+
         private Integer grade;
+
         private Integer strokeCount;
+
         private Integer freq;
+
         private Integer jlpt;
     }
 }

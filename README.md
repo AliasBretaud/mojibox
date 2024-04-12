@@ -25,8 +25,8 @@ To use Mojibox in your Java project, you can follow these steps:
 3. **Search Kanji**: Use the `searchKanji()` method to search for a specific Kanji by its literal.
 
 ```java
-KanjiDictionary kanjiDictionary = new KanjiDictionary();
-KanjiEntry kanji = kanjiDictionary.searchKanji("漢");
+KanjiDictionary dictionary = new KanjiDictionary();
+KanjiEntry kanji = dictionary.searchKanji("漢");
 ```
 
 4. **Access Kanji Data**: Once you have a Kanji object, you can access its readings, meanings, and other information.
@@ -36,8 +36,8 @@ import io.github.aliasbretaud.mojibox.enums.MeaningLanguage;
 import io.github.aliasbretaud.mojibox.enums.ReadingType;
 
 String literal = kanji.getLiteral();
-List<String> readings = kanji.getReadings().get(ReadingType.JA_ON);
-List<String> meanings = kanji.getMeanings().get(MeaningLanguage.EN);
+List<String> readings = kanji.getReading(ReadingType.JA_ON);
+List<String> meanings = kanji.getMeaning(MeaningLanguage.EN);
 ```
 
 ## About KANJIDIC
